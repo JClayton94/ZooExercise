@@ -5,11 +5,34 @@ import java.util.List;
 
 public class Zoo {
 
-	List<Animal> animals = new ArrayList<Animal>();
+	private List<Animal> animals;
 	
-	List<Mammal> mammals = new ArrayList<Mammal>();
+	private List<Mammal> mammals;
 	
-	List<Bird> birds = new ArrayList<Bird>();
+	private List<Bird> birds;
+
+	public Zoo(List<Animal> animals) {
+		this.animals = animals;
+		mammals = new ArrayList<Mammal>();
+		birds = new ArrayList<Bird>();
+	}
+
+	public void addToAnimalsArray(Animal a) {
+		
+		animals.add(a);
+		
+	}
+	public List<Animal> getAnimalsArray() {
+		
+		return animals; 
+		
+	}
 	
+	public void sortAnimalsArray() {
+		
+		animals.stream().filter(a -> a instanceof Mammal).forEach(a -> mammals.add((Mammal) a));
+		
+		animals.stream().filter(a -> a instanceof Bird).forEach(a -> birds.add((Bird) a));
+	}
 	
 }
