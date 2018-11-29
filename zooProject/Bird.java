@@ -1,12 +1,17 @@
 package zooProject;
 
 public abstract class Bird extends Animal {
-	
+
 	private int wingSpan;
 
-	public Bird(String speices, int age, int wingSpan) {
-		super(speices, age);
+	public Bird(String speices, int age, int wingSpan, String type) {
+		super(speices, age, type);
 		this.wingSpan = wingSpan;
+	}
+	public String makeNoise() {
+
+		return "Meow!";
+
 	}
 
 	public int getWingSpan() {

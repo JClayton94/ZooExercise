@@ -40,8 +40,8 @@ public class ZooTest {
 	}
 
 	@Test
-	public void testArraySort() {
-		
+	public void testArraySortMammals() {
+
 		List<Animal> testArray = new ArrayList<Animal>();
 
 		Zoo zooTest = new Zoo(testArray);
@@ -51,7 +51,10 @@ public class ZooTest {
 		zooTest.addToAnimalsArray(new Hawk(5, 30));
 		zooTest.addToAnimalsArray(new Cat(5));
 
-		
+		zooTest.sortAnimalsArray();
+
+		assertTrue("Not sorted correctly", zooTest.getMammals().get(0) instanceof Mammal);
 	}
 }
+
 
