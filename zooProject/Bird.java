@@ -8,11 +8,6 @@ public abstract class Bird extends Animal {
 		super(speices, age, type);
 		this.wingSpan = wingSpan;
 	}
-	public String makeNoise() {
-
-		return "Meow!";
-
-	}
 
 	public int getWingSpan() {
 		return wingSpan;

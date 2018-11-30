@@ -55,6 +55,24 @@ public class ZooTest {
 
 		assertTrue("Not sorted correctly", zooTest.getMammals().get(0) instanceof Mammal);
 	}
+	@Test 
+	public void testMakeNoise() {
+		
+		List<Animal> testArray = new ArrayList<Animal>();
+
+		Zoo zooTest = new Zoo(testArray);
+		
+		zooTest.addToAnimalsArray(new Cat(5));
+		zooTest.addToAnimalsArray(new Dog(5, "poodle"));
+		zooTest.addToAnimalsArray(new Penguin(10, 20));
+		zooTest.addToAnimalsArray(new Hawk(5, 30));
+		
+		assertEquals("Not correct noise", "Meow!", zooTest.getAnimalsArray().get(0).makeNoise());
+		assertEquals("Not correct noise", "Woof!", zooTest.getAnimalsArray().get(1).makeNoise());
+		assertEquals("Not correct noise", "Bwap!", zooTest.getAnimalsArray().get(2).makeNoise());
+		assertEquals("Not correct noise", "CAW!", zooTest.getAnimalsArray().get(3).makeNoise());
+	}
 }
+
 
 

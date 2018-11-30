@@ -18,9 +18,7 @@ public class Zoo {
 	}
 
 	public void addToAnimalsArray(Animal a) {
-
 		animals.add(a);
-
 	}
 
 	public void sortAnimalsArray() {
@@ -40,4 +38,5 @@ public class Zoo {
 	public List<Bird> getBirds() {
 		return birds;
 	}
+
 }
